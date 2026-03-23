@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --dark-blue: #22577a;
     --teal: #38a3a5;
     --green: #57cc99;
@@ -28,11 +28,12 @@ body {
         background-image: none !important;
     }
 
-        body.low-vision header,
+        
         body.low-vision .hero,
         body.low-vision .features,
         body.low-vision .how-it-works,
         body.low-vision .benefits,
+        body.low-vision .examples,
         body.low-vision .cta,
         body.low-vision footer {
             background: white !important;
@@ -66,7 +67,25 @@ body {
             color: black !important;
             border: 1px solid #999 !important;
         }
+body.low-vision header {
+    background-color: #00d9ff !important; 
+    color: black !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #333 !important; 
+    position: fixed; 
+    top: 0;
+    width: 100%;
+}
 
+body.low-vision header a,
+body.low-vision header .logo {
+    color: black !important;
+    text-decoration: none;
+}
+
+body.low-vision header .logo span {
+    color: #000000 !important; 
+}
 .container {
     width: 90%;
     max-width: 1200px;
@@ -74,7 +93,7 @@ body {
     padding: 0 15px;
 }
 
-/* === ШАПКА - РАСТЯНУТА НА ВЕСЬ ЭКРАН === */
+
 header {
     background: rgba(34, 87, 122, 0.95);
     color: white;
@@ -122,8 +141,9 @@ header {
     display: flex;
     list-style: none;
     position: absolute;
-    left: 40%;
-    transform: translateX(-50%);
+    left: 50%;                    
+    transform: translateX(-50%);  
+    white-space: nowrap;          
 }
 
     .nav-links li {
@@ -180,7 +200,6 @@ header {
 
 body.low-vision .mode-toggle::after {
     content: '';
-    position: absolute;
     top: 50%;
     left: 50%;
     width: 120%;
@@ -530,7 +549,11 @@ footer {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Уменьшили с 2.5rem до 2rem */
+        line-height: 1.2; /* Улучшили межстрочный интервал */
+        word-wrap: break-word; /* Принудительный перенос длинных слов */
+        overflow-wrap: break-word; /* Современный аналог */
+        padding: 0 10px; /* Небольшой отступ по краям */
     }
 
     .hero p {
