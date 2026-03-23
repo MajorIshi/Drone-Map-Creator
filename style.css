@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary-color: #2ecc71;
     --primary-hover: #27ae60;
     --dark-bg: #2c3e50;
@@ -20,7 +20,7 @@
         line-height: 1.6;
         background-color: var(--white);
     }
-
+     
     .navbar {
         background-color: var(--dark-bg);
         color: var(--white);
@@ -228,6 +228,7 @@ header {
     display: flex;
     align-items: center;
 }
+
 
 /* === ЛОГОТИП === */
 .logo {
